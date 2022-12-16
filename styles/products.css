@@ -1,0 +1,339 @@
+@font-face {
+  font-family: "quiapo";
+  src: url("./../fonts/Quiapo_Free.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "arial";
+  src: url("./../fonts/arial.ttf") format("truetype");
+}
+
+*,
+*::before,
+*::after {
+  font-family: "arial", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#cart-float {
+  position: absolute;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 30;
+  height: 100vh;
+  backdrop-filter: blur(3px);
+}
+
+#buttoncontainer {
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  justify-content: center;
+  align-items: center;
+}
+
+#buttoncontainer > button {
+  /* display: none; */
+  display: flex;
+}
+
+#buttoncontainer > h1 {
+  /* display: none; */
+  display: flex;
+}
+
+#loginbtn {
+  padding: 1rem;
+  border: 2px solid #f43b16;
+  border-radius: 10px;
+  font-size: 0.8rem;
+}
+
+#signupbtn {
+  padding: 1rem;
+  background: #f43b16;
+  border-radius: 10px;
+  font-size: 0.8rem;
+}
+
+.cart-cont {
+  width: 40%;
+  max-height: 70vh;
+  padding: 3rem;
+  background: #f4a900;
+  border-radius: 1rem;
+  border: 2px solid #f43b16;
+}
+
+.contentarea {
+  height: 55vh;
+  overflow-y: scroll;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+}
+
+.contentarea > li {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.cart-cont > .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.close-cart {
+  cursor: pointer;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+}
+
+.wrapper {
+  display: grid;
+  height: 100vh;
+  position: relative;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+}
+
+.heading {
+  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-row-end: 2;
+  grid-column-end: 4;
+  background: #f4a900;
+  display: flex;
+  padding-left: 5%;
+  padding-right: 5%;
+  align-items: center;
+  justify-content: space-between;
+  height: 15vh;
+}
+
+.heading > h1 {
+  font-family: "quiapo", "Poppins", sans-serif !important;
+}
+
+.nav-container {
+  background: #0a5028;
+  grid-row-start: 2;
+  grid-column-start: 1;
+  grid-row-end: 4;
+  grid-column-end: 2;
+  gap: 5rem;
+  display: flex;
+  height: 85vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-container > button {
+  cursor: pointer;
+  color: #f4a900;
+  background: #A22918;
+  text-align: center;
+  border-radius: 15px;
+  padding: 1rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  font-size: 2.5rem;
+  transition: all 300ms ease-in-out;
+  font-weight: bold;
+  position: relative;
+  width: 300px;
+}
+
+.nav-container > button > p {
+  position: absolute;
+  z-index: 10;
+  font-size: 1rem;
+  top: -5px;
+  right: -5px;
+  transition: all 3000ms ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+}
+
+.nav-container > button:hover {
+  color: #fff;
+  background: #e03c0a;
+}
+
+.main-nav {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-nav > button {
+  cursor: pointer;
+  color: #800000;
+  background: #f4a900;
+  border-radius: 15px;
+  padding: 1rem;
+  /*padding-left: 3rem;
+  padding-right: 3rem; */
+  font-size: 2.5rem;
+  transition: all 300ms ease-in-out;
+  font-weight: bold;
+  width: 300px;
+  text-align: center;
+}
+
+.main-nav > button:hover {
+  color: #fff;
+  background: #e03c0a;
+}
+
+.main-container {
+  background-color: #e8e4c7;
+  grid-row-start: 2;
+  grid-column-start: 2;
+  grid-row-end: 4;
+  grid-column-end: 4;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding: 2rem;
+  overflow-y: scroll;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 85vh;
+}
+
+.main-container > div {
+  background-color: #c7dbad;
+  display: flex;
+  width: 16rem;
+  height: 17rem;
+  flex-direction: column;
+  border: 2px solid #f43b16;
+  border-radius: 15px;
+  background: #f4a900;
+  transition: all 300ms ease-in-out;
+  justify-content: center;
+  text-align: center;
+  line-height: 2; 
+  cursor: pointer;
+  align-items: center;
+}
+
+.main-container > div:hover {
+  background-color: #f43b16;
+}
+
+.main-container > div > img {
+  width: 80%;
+  border-radius: 1rem;
+}
+
+.main-container > div > h1 {
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  flex-direction: row;
+}
+
+.main-container > div > .desc {
+  font-size: 1.5rem;
+  }
+
+.main-container > div > .price {
+  color:#A22918;   
+  font-size: 1.2rem;
+  }
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #1a1a1a;
+  font-family: "Poppins", sans-serif !important;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  padding: 16px;
+  font-weight: 700;
+  position: fixed;
+  z-index: 20;
+  left: 50%;
+  top: 30px;
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    top: 30px;
+    opacity: 1;
+  }
+  to {
+    top: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    top: 30px;
+    opacity: 1;
+  }
+  to {
+    scale: 0;
+    opacity: 0;
+  }
+}
